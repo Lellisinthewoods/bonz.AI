@@ -7,6 +7,7 @@
     --text__yellow: #DFB426;
     --text__white: #ffffff;
     --button__turquoise: #06495E;
+    --button__turquoise--hover: #062e3a;
 }
 
 *{
@@ -189,6 +190,10 @@ body{
     line-height: 30px;
     text-align: center;
     margin: 1rem;
+}
+
+.card__BTN:hover{
+    background-color: var(--button__turquoise--hover);
 }
 
 /*HEADER*/
