@@ -15,13 +15,92 @@
     color: var(--text__grey)
 }
 
-body{
+.button{
+    background-color: var(--button__turquoise);
+    color:var(--text__white);
+    outline-style: solid;
+    outline-color: var(--text__grey);
+    border-width: 0;
+    border-radius: 3px;
+    padding:0.25rem 0.5rem 0.25rem 0.5rem;
+    font-family: 'Michroma';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    margin: 1rem;
+    margin-left:1px;
+}
+
+.button:hover{
+    background-color: var(--button__turquoise--hover);
+}
+
+/*HEADER*/
+
+.header{
+    display:grid;
+    grid-template-columns: repeat(7,1fr);
+    background-color: var(--header__black);
+}
+
+.header__text{
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 29px;
+    margin:1rem;
+}
+
+.header__iconArea{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin:1rem;
+}
+
+.header__img{
+    max-width: 50%;
+}
+
+.header__selectDateArea{
+    grid-column: auto / span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__selectPeopleArea{
+    grid-column: auto / span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__input{
+    background: rgba(217, 217, 217, 0.2);
+    border: 1px solid #B7BAC9;
+    border-radius: 3px;
     margin:0;
     padding:0;
-    background: linear-gradient(226.19deg, #207779 14.77%, #043143 56.33%);
-    min-width: 100%;
-    min-height: 100%;
+    max-width:40%;
 }
+
+.header__btnArea{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__menuArea{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right:2rem;
+}
+
+/*MAIN*/
 
 .main{
     display: flex;
@@ -57,10 +136,6 @@ body{
     font-weight: 200;
     font-size: 31px;
     line-height: 42px;
-}
-
-.main__BTN{
-    /*maybe just the card_BTN?*/
 }
 
 /*ABOUT US PAGE*/
@@ -183,91 +258,6 @@ body{
     margin-top: 1rem;
 }
 
-.card__BTN{ /*USED IN VARIOUS PLACES, CONSIDER RENAMING*/
-    background-color: var(--button__turquoise);
-    color:var(--text__white);
-    outline-style: solid;
-    outline-color: var(--text__grey);
-    border-width: 0;
-    border-radius: 3px;
-    padding:0.25rem 0.5rem 0.25rem 0.5rem;
-    font-family: 'Michroma';
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px;
-    text-align: center;
-    margin: 1rem;
-    margin-left:1px;
-}
-
-.card__BTN:hover{
-    background-color: var(--button__turquoise--hover);
-}
-
-/*HEADER*/
-
-.header{
-    display:grid;
-    grid-template-columns: repeat(7,1fr);
-    background-color: var(--header__black);
-}
-
-.header__text{
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 29px;
-    margin:1rem;
-}
-
-.header__iconArea{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin:1rem;
-}
-
-.header__img{
-    max-width: 50%;
-}
-
-.header__selectDateArea{
-    grid-column: auto / span 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.header__selectPeopleArea{
-    grid-column: auto / span 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.header__input{
-    background: rgba(217, 217, 217, 0.2);
-    border: 1px solid #B7BAC9;
-    border-radius: 3px;
-    margin:0;
-    padding:0;
-    max-width:40%;
-}
-
-.header__btnArea{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.header__menuArea{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right:2rem;
-}
-
 /*FOOTER*/
 
 .footer{
@@ -313,90 +303,4 @@ body{
     font-weight: 200;
     font-size: 15px;
     line-height: 34px;
-}
-
-@media only screen and (max-width:390px) {
-
-    .header{
-        display:flex;
-        flex-direction: row;
-    }
-
-    .header__img{
-        max-width: 25%;
-    }
-
-    .header__selectDateArea, .header__selectPeopleArea, .header__input{
-        display:none;
-    }
-
-    header button{
-        display:none;
-    }
-
-    .main__title{
-        font-size: 45px;
-        margin:3px;
-    }
-
-    .main__subTitle{
-        font-size: 15px;
-    }
-
-    .aboutPage__title{
-        font-size: 37px;
-    }
-
-    .aboutPage__text{
-        font-size: 15px;
-    }
-
-    .card{
-        display:flex;
-        flex-direction: column;
-    }
-
-    .card__descText{
-        font-size: 15px;
-    }
-
-    .card__bookingArea{
-        display:flex;
-        justify-content: center;
-        align-items: flex-end;
-        flex-direction: column;
-        margin:2rem;
-    }
-
-    .card__bookingDate{
-        font-size: 12px;
-    }
-
-    .card__bookingGuests{
-        margin:3px;
-        font-size: 12px;
-    }
-
-    .card__BTN{
-        align-self: center;
-    }
-
-    .footer{
-        display:flex;
-        align-items:center;
-        justify-content: space-between;
-        padding:0.5rem;
-    }
-
-    .footer__icon{
-        display:none;
-    }
-
-    .footer__link{
-        padding:0.5rem;
-    }
-
-    .footer__copyrightText{
-        font-size: 12px;
-    }
 }
