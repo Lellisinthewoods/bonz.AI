@@ -136,7 +136,7 @@ body{
 
 .card__descArea{
     grid-column: auto / span 3;
-    padding-left: 1rem;
+    padding-left: 3rem;
     padding-right: 1rem;
     display: flex;
     justify-content: flex-start;
@@ -147,7 +147,7 @@ body{
 .card__descTitle{
     font-family: 'Michroma', sans-serif;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 43px;
 }
 
@@ -156,6 +156,11 @@ body{
     font-weight: 400;
     font-size: 20px;
     line-height: 27px;
+    margin-top:1px;
+}
+
+.card__bookingArea{
+    margin-top: 2rem;
 }
 
 .card__bookingDate{
@@ -163,8 +168,9 @@ body{
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 21px;
+    font-size: 15px;
     line-height: 29px;
+    margin:3px;
 }
 
 .card__bookingGuests{
@@ -172,8 +178,9 @@ body{
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 21px;
+    font-size: 15px;
     line-height: 29px;
+    margin-top: 1rem;
 }
 
 .card__BTN{ /*USED IN VARIOUS PLACES, CONSIDER RENAMING*/
@@ -190,6 +197,7 @@ body{
     line-height: 30px;
     text-align: center;
     margin: 1rem;
+    margin-left:1px;
 }
 
 .card__BTN:hover{
@@ -305,4 +313,90 @@ body{
     font-weight: 200;
     font-size: 15px;
     line-height: 34px;
+}
+
+@media only screen and (max-width:390px) {
+
+    .header{
+        display:flex;
+        flex-direction: row;
+    }
+
+    .header__img{
+        max-width: 25%;
+    }
+
+    .header__selectDateArea, .header__selectPeopleArea, .header__input{
+        display:none;
+    }
+
+    header button{
+        display:none;
+    }
+
+    .main__title{
+        font-size: 45px;
+        margin:3px;
+    }
+
+    .main__subTitle{
+        font-size: 15px;
+    }
+
+    .aboutPage__title{
+        font-size: 37px;
+    }
+
+    .aboutPage__text{
+        font-size: 15px;
+    }
+
+    .card{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .card__descText{
+        font-size: 15px;
+    }
+
+    .card__bookingArea{
+        display:flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+        margin:2rem;
+    }
+
+    .card__bookingDate{
+        font-size: 12px;
+    }
+
+    .card__bookingGuests{
+        margin:3px;
+        font-size: 12px;
+    }
+
+    .card__BTN{
+        align-self: center;
+    }
+
+    .footer{
+        display:flex;
+        align-items:center;
+        justify-content: space-between;
+        padding:0.5rem;
+    }
+
+    .footer__icon{
+        display:none;
+    }
+
+    .footer__link{
+        padding:0.5rem;
+    }
+
+    .footer__copyrightText{
+        font-size: 12px;
+    }
 }
